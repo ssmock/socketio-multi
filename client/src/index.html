@@ -4,18 +4,16 @@
 		<title></title>
 	</head>
 	<body>
-		<canvas></canvas>
+		<canvas style="position: fixed; top: 0; right: 0; bottom: 0; left: 0;"></canvas>
 		<!-- Notice the URL, this is handled by socket.io on the server automatically, via express -->
 		<script src="/socket.io/socket.io.js"></script>
 		<script type="text/javascript" src="keyboard.js"></script>
 		<script type="text/javascript">
-      console.log(io);
-
       var socket = io.connect('/');
 
 			socket.on('onconnected', function( data ) {
 				console.log('Connected successfully to the socket.io server. My server side ID is ' + data.ID);
 			});
-			</script>
+		</script>
 	</body>
 </html>
